@@ -1,0 +1,43 @@
+<mvc:View controllerName="zproject4.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						
+						<Table id='table3' mode="SingleSelect" selectionChange="onDelChange">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<ToolbarSpacer />
+										<!-- visible="false"/> -->
+										<Button id='button3_1' text="Edit Mode" press="onEditToggle" type="Accept"
+											visible="{= !${PageState>/table1/editmode} }" />
+										<Button id='button3_2' text="Disp Mode" press="onEditToggle" type="Accept"
+											visible="{PageState>/table1/editmode}" />
+										<Button id='button3_3' text="Create" press="onCreate" type="Accept"
+											visible="{PageState>/table1/editmode}" />
+										<Button id='button3_4' text="Delete" press="onDelete" type="Reject"
+											visible="{PageState>/table1/editmode}" />
+										<Button id='button3_5' text="Change" press="onChange" type="Emphasized"
+											visible="{PageState>/table1/editmode}" />
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+
+							<columns>
+								<Column>
+									<Text text="col1"></Text>
+								</Column>
+								<Column>
+									<Text text="col2"></Text>
+								</Column>
+							</columns>
+						</Table>
+
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
